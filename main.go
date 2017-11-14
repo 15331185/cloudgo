@@ -9,12 +9,12 @@ const (
 
 func main() {
 	var port string
-	// Get predefined env port
+	// 获取 env port
 	port = os.Getenv("PORT")
 	if (len(port) <= 0) {
 		port = PORT
 	}
-	// Define server port
+	//服务器端口为9090
 	flag.StringVarP(&port, "port", "p", "9090", "define server port")
 	flag.Parse()
 	server := service.NewServer()
