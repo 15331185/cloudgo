@@ -15,11 +15,10 @@ func NewServer() *negroni.Negroni {
 
 	})
 
-	r := mux.NewRouter()
-
+	r := mux.NewRouter()//新的mux和server
 	server := negroni.Classic()
 
-	initRouter(r, formatter)
+	initRouter(r, formatter)//添加路由
 
 	server.UseHandler(r)
 	return server
