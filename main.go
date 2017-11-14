@@ -4,7 +4,7 @@ package main
 
 import flag "github.com/spf13/pflag"
 
-import "github.com/txzdream/serviceCourse/cloudgo/service"
+import "service"
 
 import "os"
 
@@ -38,7 +38,7 @@ func main() {
 
 	// Define server port
 
-	flag.StringVarP(&port, "port", "p", "3000", "define server port")
+	flag.StringVarP(&port, "port", "p", "9090", "define server port")
 
 	flag.Parse()
 
